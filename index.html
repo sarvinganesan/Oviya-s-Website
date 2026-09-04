@@ -4,77 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Oviya ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="hearts-container"></div>
+  <div id="hearts-container" aria-hidden="true"></div>
 
   <main>
     <section class="hero">
-      <div class="hero-content">
-        <div class="sparkle">✦</div>
-        <p class="eyebrow">A little birthday surprise</p>
-        <h1>Happy Birthday, <span>Oviya</span> ❤️</h1>
-        <p class="subtitle">To the girl who makes my ordinary days feel extraordinary.</p>
-        <button class="love-button" onclick="openLetter()">Open Your Letter 💌</button>
-        <p class="scroll-hint">↓ scroll for more love ↓</p>
+      <div class="sparkle">✦</div>
+      <p class="eyebrow">A LITTLE BIRTHDAY SURPRISE</p>
+
+      <h1>Happy Birthday,<br><span>Oviya</span> <span class="big-heart">♥</span></h1>
+
+      <div class="photo-frame">
+        <img src="oviya-photo.png" alt="Oviya" class="oviya-photo">
+      </div>
+
+      <p class="tagline">To the girl who makes my ordinary days feel extraordinary.</p>
+
+      <button class="primary-btn" onclick="openLetter()">Open Your Letter 💌</button>
+      <p class="scroll-hint">↓ scroll for more love ↓</p>
+    </section>
+
+    <section id="letter" class="letter-section">
+      <div class="paper">
+        <p class="section-label">A LETTER FOR YOU</p>
+        <h2>My Dearest Oviya,</h2>
+        <p>
+          Today is all about celebrating you — the beautiful person who brings
+          warmth, happiness, and so many unforgettable moments into my life.
+        </p>
+        <p>
+          I hope this birthday reminds you how deeply loved, appreciated, and
+          special you are. Your smile can brighten the simplest day, and your
+          presence makes everything feel a little more beautiful.
+        </p>
+        <p>
+          May this new year of your life bring you endless reasons to smile,
+          wonderful memories, and every happiness your heart deserves.
+        </p>
+        <p class="signature">— Sarvin ❤️</p>
       </div>
     </section>
 
-    <section class="letter-section" id="letter">
-      <div class="card letter-card">
-        <p class="small-title">Dear Oviya,</p>
-        <h2>Today is all about you.</h2>
-        <p>Happy Birthday to the most special person in my world. I hope this beautiful new year of your life brings you endless happiness, beautiful memories, and everything your heart wishes for.</p>
-        <p>Thank you for being you — for your beautiful smile, your kindness, your little quirks, and for making my life brighter just by being a part of it.</p>
-        <p>If I could give you one gift today, it would be the ability to see yourself through my eyes for just one moment. Then you would know how beautiful, precious, and special you truly are to me.</p>
-        <p>I hope we continue creating beautiful memories together, laughing at silly things, supporting each other, and enjoying all the little moments that make life special.</p>
-        <p class="signature">With all my heart,<br><strong>— Sarvin ❤️</strong></p>
-      </div>
-    </section>
-
-    <section class="reasons">
-      <p class="eyebrow">A few things I love</p>
-      <h2>Why Oviya is unforgettable</h2>
-      <div class="reason-grid">
-        <div class="card reason-card">
-          <div class="icon">✨</div>
+    <section class="cards-section">
+      <p class="section-label">THREE THINGS I LOVE</p>
+      <div class="cards">
+        <article class="love-card">
+          <div class="card-icon">☺</div>
           <h3>Your Smile</h3>
-          <p>Your smile has a magical way of making even the hardest days feel a little brighter.</p>
-        </div>
-        <div class="card reason-card">
-          <div class="icon">🌙</div>
+          <p>It has a way of making even an ordinary moment feel special.</p>
+        </article>
+        <article class="love-card">
+          <div class="card-icon">♥</div>
           <h3>Your Presence</h3>
-          <p>Somehow, everything feels better and more peaceful whenever you're around.</p>
-        </div>
-        <div class="card reason-card">
-          <div class="icon">💖</div>
+          <p>Everything feels better when you're around.</p>
+        </article>
+        <article class="love-card">
+          <div class="card-icon">✦</div>
           <h3>Your Heart</h3>
-          <p>The beautiful person you are is the part of you I treasure the most.</p>
-        </div>
+          <p>Your kindness and warmth are what make you truly unforgettable.</p>
+        </article>
       </div>
     </section>
 
     <section class="final-section">
-      <div class="card final-card">
-        <div class="big-heart">♥</div>
-        <h2>Here's to another beautiful year.</h2>
-        <p>May your birthday be as wonderful as you are, Oviya. Keep smiling, keep dreaming, keep shining, and never forget how deeply you are loved.</p>
-        <button class="surprise-button" onclick="birthdaySurprise()">One More Surprise 🎁</button>
-      </div>
+      <div class="final-heart">♥</div>
+      <h2>Happy Birthday, Oviya!</h2>
+      <p>No matter where life takes us, I hope you always know how special you are to me.</p>
+      <button class="surprise-btn" onclick="birthdaySurprise()">One More Surprise 🎁</button>
     </section>
-
-    <footer>Made with ❤️ by <strong>Sarvin</strong> for <strong>Oviya</strong></footer>
   </main>
 
-  <div class="modal" id="surpriseModal">
+  <footer>Made with ❤️ by Sarvin for Oviya</footer>
+
+  <div id="surpriseModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="surpriseTitle">
     <div class="modal-card">
-      <button class="close" onclick="closeSurprise()" aria-label="Close">×</button>
-      <div class="big-heart">♥</div>
-      <h2>Oviya, you are my favorite chapter. ❤️</h2>
-      <p>Happy Birthday, beautiful. Wherever life takes us, I hope we keep collecting little moments worth remembering.</p>
-      <p>You deserve all the happiness in the world.</p>
-      <p class="modal-sign">— Sarvin ❤️</p>
+      <button class="close-btn" onclick="closeSurprise()" aria-label="Close">×</button>
+      <div class="modal-heart">♥</div>
+      <h2 id="surpriseTitle">Oviya, you are my favorite chapter. ❤️</h2>
+      <p>Happy Birthday to someone who makes life a little more beautiful just by being in it.</p>
     </div>
   </div>
 
