@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{--pink:#d94f70;--dark:#b93658;--text:#3d2630;--muted:#7b626b;--bg:#fff7f9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 15% 10%,#ffe6ee,transparent 28%),radial-gradient(circle at 85% 25%,#fce1ea,transparent 30%),var(--bg);color:var(--text);font-family:Poppins,sans-serif;overflow-x:hidden}
+main{position:relative;z-index:2}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:60px 20px;position:relative}
+.hero-content{max-width:900px}
+.sparkle{font-size:50px;color:var(--pink);animation:pulse 2s infinite}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.75rem;color:var(--pink);font-weight:600}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:.95}
+h1{font-size:clamp(4rem,12vw,9rem);margin:10px 0 25px;font-weight:700}
+h1 span{color:var(--pink)}
+.subtitle{font-size:clamp(1rem,2.4vw,1.35rem);color:var(--muted);max-width:650px;margin:auto;line-height:1.7}
+.love-button,.surprise-button{margin-top:35px;border:0;border-radius:999px;padding:16px 30px;background:var(--pink);color:white;font:600 1rem Poppins,sans-serif;cursor:pointer;box-shadow:0 12px 30px #d94f7047;transition:.2s}
+.love-button:hover,.surprise-button:hover{transform:translateY(-4px);background:var(--dark)}
+.scroll-hint{position:absolute;bottom:28px;left:0;right:0;color:var(--muted);font-size:.75rem;letter-spacing:.1em}
+.letter-section,.reasons,.final-section{max-width:1050px;margin:auto;padding:100px 20px}
+.card{background:#ffffffcc;border:1px solid #ffffffeb;backdrop-filter:blur(14px);box-shadow:0 25px 70px #96375224;border-radius:32px}
+.letter-card{padding:clamp(30px,7vw,80px)}
+.small-title{color:var(--pink);font-family:'Cormorant Garamond',serif;font-size:1.6rem}
+.letter-card h2,.reasons h2,.final-card h2{font-size:clamp(2.8rem,7vw,5rem);margin:0 0 30px}
+.letter-card p{color:var(--muted);font-size:1.05rem;line-height:1.9;margin-bottom:20px}
+.signature{margin-top:40px;color:var(--pink)!important;font-family:'Cormorant Garamond',serif;font-size:1.5rem!important}
+.reasons{text-align:center}
+.reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:45px}
+.reason-card{padding:40px 25px}
+.icon{font-size:2.5rem;margin-bottom:15px}
+.reason-card h3{font-size:2rem;margin:10px 0}
+.reason-card p{color:var(--muted);line-height:1.7;font-size:.92rem}
+.final-section{padding-top:30px;text-align:center}
+.final-card{padding:clamp(35px,7vw,75px)}
+.final-card p{color:var(--muted);max-width:650px;margin:auto;line-height:1.8}
+.big-heart{color:var(--pink);font-size:70px;animation:heartbeat 1.4s infinite}
+footer{text-align:center;padding:30px 20px 45px;color:var(--muted);font-size:.85rem}
+footer strong{color:var(--pink)}
+.modal{position:fixed;inset:0;z-index:20;display:none;place-items:center;padding:20px;background:#31161f7a}
+.modal.show{display:grid}
+.modal-card{position:relative;max-width:600px;text-align:center;padding:55px 35px;border-radius:30px;background:#fffafb;box-shadow:0 30px 100px #0003;animation:pop .3s ease}
+.modal-card h2{font-size:3rem;margin:10px 0 20px}
+.modal-card p{color:var(--muted);line-height:1.8}
+.modal-sign{color:var(--pink)!important;font-family:'Cormorant Garamond',serif;font-size:1.5rem}
+.close{position:absolute;right:18px;top:12px;border:0;background:transparent;font-size:2rem;color:var(--muted);cursor:pointer}
+.heart{position:fixed;bottom:-40px;pointer-events:none;color:var(--pink);opacity:.6;z-index:1;animation:floatUp linear forwards}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.15)}30%{transform:scale(1)}}
+@keyframes pulse{50%{transform:scale(1.15);opacity:.65}}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+@media(max-width:700px){.reason-grid{grid-template-columns:1fr}h1{font-size:clamp(3.6rem,19vw,6rem)}.letter-section,.reasons,.final-section{padding-left:15px;padding-right:15px}.card{border-radius:24px}.modal-card h2{font-size:2.5rem}}
