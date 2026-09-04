@@ -1451,3 +1451,9 @@ body {
   }
 
 }
+/* Keep the original website scrollable */
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
