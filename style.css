@@ -323,15 +323,13 @@ footer {
     width: min(250px, 70vw);
   }
 }
-   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
-
-.hero p {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 24px;
+.hero h1 + p {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   color: #c43d70;
-  margin: 14px 0 22px;
+  margin: 16px 0 22px;
   text-transform: uppercase;
-  text-shadow: 0 2px 8px rgba(196, 61, 112, 0.15);
+  text-shadow: 0 3px 10px rgba(196, 61, 112, 0.18);
 }
